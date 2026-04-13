@@ -1,0 +1,79 @@
+\documentclass[a4paper, 13pt]{article}
+
+% packages
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{siunitx}
+\captionsetup[figure]{labelfont=bf, textfont=it, labelsep=colon, font=small, justification=centering}
+\captionsetup[table]{labelfont=bf, textfont=it, labelsep=colon, font=small, justification=centering}
+\usepackage{geometry}
+\geometry{margin=1cm}
+\geometry{top=1.5cm}
+\geometry{bottom=1.5cm}
+\setlength{\footskip}{0.9cm}
+\usepackage{setspace}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{xcolor}
+\newcommand\nota[1]{\textcolor{red}{#1}}
+
+% Header: course, title, authors, institution, date and abstract
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small Course Code - Course Name • Group Number}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\bibliographystyle{plain}
+
+\usepackage{titlesec}
+\titleformat{\section}[block]
+  {\centering\bfseries\normalsize}
+  {\Roman{section}.}
+  {1em}
+  {}
+
+\begin{document}
+
+\begin{center}
+    {\Large \textbf{Main Title}}\\[0.3cm]
+    Author 1., Author 2., Author 3. (...)\\[0.1cm]
+    Institute of, University of\\[0.3cm]
+    Date
+\end{center}
+\begin{abstract}
+\textit{Abstract goes here.}
+\end{abstract}
+\vspace{0.1cm} 
+
+% for this to work, your .tex files must have the same names as
+% the ones depicted in each section and be located in the same
+% folder (you can rename them as needed). You also need a .bib
+% file to import all citations from.
+\setlength{\columnsep}{0.6cm}
+\raggedcolumns
+\begin{multicols*}{2}
+\section{Introduction}
+\input{sections/introduction}
+
+\section{Procedures}
+\input{sections/procedure}
+
+\section{Results and Discussions}
+\input{sections/results_conclusions}
+
+\section{Conclusion}
+\input{sections/conclusion}
+
+\input{sections/references}
+
+\end{multicols*}
+\end{document}
